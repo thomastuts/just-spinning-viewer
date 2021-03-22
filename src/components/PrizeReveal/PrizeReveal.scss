@@ -1,0 +1,34 @@
+@import "src/styles/variables";
+
+.prize-reveal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.prize-reveal__announce {
+  font-size: 8vh;
+  margin-bottom: 5vh;
+}
+
+.prize-reveal__result {
+  color: $bold-color-primary;
+  font-size: 12vh;
+}
+
+.wheelContainer {
+  width: 200px;
+  height: 200px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

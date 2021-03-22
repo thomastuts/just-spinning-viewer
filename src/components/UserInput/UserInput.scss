@@ -1,0 +1,67 @@
+@import "src/styles/variables";
+
+.user-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.user-input__image,
+.user-input__message {
+  box-shadow: 4px 4px 0 rgba(#000, 0.25);
+}
+
+
+.user-input__image {
+  display: block;
+  width: 8vw;
+  height: 8vw;
+  border: 10px solid #fff;
+  border-radius: 1rem;
+  margin-right: 2vw;
+}
+
+.user-input__content {
+  flex: 1;
+  text-shadow: 2px 2px 0 rgba(#000, 0.25);
+}
+
+.user-input__display-name {
+  font-size: 2.5vh;
+  margin-bottom: 1vh;
+}
+
+.user-input__hidden-message {
+  height: 2.5vh;
+  border-radius: 0.5rem;
+  max-width: 7vw;
+  background: rgba(#000, 0.1);
+}
+
+.user-input__message {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 1.5vh;
+  min-height: 5vh;
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  background: #fff;
+  font-size: 2.5vh;
+  text-shadow: none;
+  color: #444;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 1vh solid transparent;
+    border-right: 1vh solid transparent;
+    border-top: 1vh solid #fff;
+    transform: translateX(-50%);
+  }
+}

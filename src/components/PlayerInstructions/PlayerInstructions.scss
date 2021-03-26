@@ -1,6 +1,8 @@
 @import "src/styles/variables";
 
 .player-instructions {
+  width: fit-content;
+  margin: 0 auto;
   padding: 1rem;
   border-radius: 1rem;
   background: rgba(#000, 0.45);

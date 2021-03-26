@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+
+.icebreaker-prompt {
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  background-color: $bold-color-secondary;
+  text-shadow: none;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 0 rgba(#000, 0.25);
+  font-size: 4vh;
+}
+
+.icebreaker-prompt__question-icon {
+  position: absolute;
+  top: -10vh;
+  left: 50%;
+  height: 12vh;
+  width: 12vh;
+  transform: translateX(-50%);
+}

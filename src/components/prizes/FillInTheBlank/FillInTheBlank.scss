@@ -1,0 +1,21 @@
+.blank-prompt {
+  padding: 3vh;
+  max-width: 25vw;
+  background-color: #333;
+  border: 10px solid #fff;
+  border-radius: 1rem;
+  font-family: sans-serif;
+  text-transform: none;
+  text-shadow: none;
+}
+
+.blank-prompt__content {
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+.blank-prompt__attribution {
+  margin-top: 4.5vh;
+  font-size: 1.5vh;
+  opacity: 0.5;
+}

@@ -2,14 +2,23 @@ import { useChannel } from "@harelpls/use-pusher";
 import React, { useEffect, useState } from "react";
 
 import useActivePrize from "../../../hooks/useActivePrize.js";
+import AnimatedBackground from "../../AnimatedBackground/AnimatedBackground.js";
 import DebugJSON from "../../DebugJSON/DebugJSON.js";
 import PrizeReveal from "../../PrizeReveal/PrizeReveal.js";
+import FillInTheBlank from "../../prizes/FillInTheBlank/FillInTheBlank.js";
+import GuessTheWord from "../../prizes/GuessTheWord/GuessTheWord.js";
 import LegsOrHotdogQuiz from "../../prizes/LegsOrHotdogQuiz/LegsOrHotdogQuiz";
+import Icebreaker from "../../prizes/Icebreaker/Icebreaker";
+import Oneliner from "../../prizes/Oneliner/Oneliner.js";
 
 import "./Viewer.scss";
 
-const PrizeComponentsByPrizeType = {
+const prizeComponentsByPrizeType = {
   LEGS_OR_HOTDOGS_QUIZ: LegsOrHotdogQuiz,
+  ICEBREAKER: Icebreaker,
+  GUESS_THE_WORD: GuessTheWord,
+  FILL_IN_THE_BLANK: FillInTheBlank,
+  ONELINER: Oneliner,
 };
 
 const REVEAL_MOCK_DATA = {
@@ -52,16 +61,21 @@ const Viewer = ({ channel }) => {
       return null;
     }
 
-    const PrizeComponent = PrizeComponentsByPrizeType[activePrize.type];
+    const PrizeComponent = prizeComponentsByPrizeType[activePrize.type];
 
     if (!PrizeComponent) {
       console.warn("No Prize component for", activePrize.type);
     }
 
-    mainContent = <PrizeComponent prize={activePrize} />;
+    mainContent = <PrizeComponent prize={activePrize} channel={channel} />;
   }
 
-  return <div className="viewer">{mainContent}</div>;
+  return (
+    <div className="viewer">
+      <div className="viewer__content">{mainContent}</div>
+      <AnimatedBackground />
+    </div>
+  );
 };
 
 export default Viewer;

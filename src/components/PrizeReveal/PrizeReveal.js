@@ -8,10 +8,9 @@ import RevealAudio from "../../sounds/mixkit-revealing-bonus-notification-958.wa
 
 import "./PrizeReveal.scss";
 
-const obj = { foo: "bar", baz: "quz" };
-
 const humanizedPrizeNames = {
   LEGS_OR_HOTDOGS_QUIZ: "Legs or Hotdogs",
+  ICEBREAKER: "Icebreaker",
 };
 
 const PrizeReveal = ({ prize }) => {

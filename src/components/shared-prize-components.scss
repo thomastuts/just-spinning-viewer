@@ -1,0 +1,23 @@
+@import "src/styles/variables";
+
+.prize-title {
+  font-size: 7vh;
+  color: $bold-color-primary;
+}
+
+.prize-description {
+  max-width: 45vw;
+  display: inline-block;
+  font-size: 3.5vh;
+}
+
+.main-content-grid {
+  display: grid;
+  grid-gap: 4vw;
+  align-items: center;
+  margin-top: 8vh;
+
+  //> * {
+  //  outline: 3px solid red;
+  //}
+}

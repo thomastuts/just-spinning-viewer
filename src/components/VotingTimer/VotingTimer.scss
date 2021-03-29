@@ -1,0 +1,49 @@
+.voting-timer {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+
+.voting-timer__text {
+  font-size: 3vh;
+  text-align: right;
+  margin-right: 2vw;
+}
+
+.voting-timer__remaining-time {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: calc(50% - 0.3vh);
+  transform: translateY(-50%);
+  font-size: 5vh;
+}
+
+.voting-timer__visual {
+  position: relative;
+}
+
+.voting-timer__progress-ring {
+  position: relative;
+  z-index: 1;
+}
+
+.voting-timer__progress-ring__circle {
+  stroke: white;
+  transition: 0.35s stroke-dashoffset;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.voting-timer__background-ring__circle {
+  stroke: rgba(#fff, 0.3);
+}
+
+.voting-timer__background-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

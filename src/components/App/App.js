@@ -9,7 +9,7 @@ const pusherConfig = {
   cluster: "eu",
 };
 
-//window.Pusher.logToConsole = true;
+window.Pusher.logToConsole = true;
 
 const App = () => {
   const [channel, setChannel] = useState(null);

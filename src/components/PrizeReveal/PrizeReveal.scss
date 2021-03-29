@@ -1,5 +1,17 @@
 @import "src/styles/variables";
 
+.section {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .prize-reveal {
   position: absolute;
   top: 0;
@@ -11,6 +23,27 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.prize-reveal__game-title {
+  color: $bold-color-primary;
+  font-size: 12vh;
+}
+
+.prize-reveal__contestant-title {
+  font-size: 6vh;
+}
+
+.prize-reveal__contestant-avatar {
+  width: 10vw;
+  border: 10px solid #fff;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 0 rgba(#000, 0.25);
+}
+
+.prize-reveal__contestant-name {
+  color: $bold-color-primary;
+  font-size: 9vh;
 }
 
 .prize-reveal__announce {

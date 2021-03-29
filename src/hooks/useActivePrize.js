@@ -19,7 +19,11 @@ export default function useActivePrize({ channelId }) {
           }
         };
 
-        channel.bind("activePrizeUpdate", getActivePrize);
+        channel.bind("broadcast", (payload) => {
+          if (payload.event === "activePrizeUpdate") {
+            getActivePrize();
+          }
+        });
         await getActivePrize();
       })();
     }

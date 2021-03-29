@@ -12,6 +12,8 @@ import Stack from "../../Stack/Stack.js";
 import UserInput from "../../UserInput/UserInput.js";
 
 const FillInTheBlank = ({ prize, channel }) => {
+  const hideMessages = !Boolean(prize.streamer_input && prize.viewer_input);
+
   return (
     <React.Fragment>
       <Stack vertical spacing="default">
@@ -24,6 +26,7 @@ const FillInTheBlank = ({ prize, channel }) => {
             avatar={channel.profile_image_url}
             displayName={channel.channel_display_name}
             message={prize.streamer_input}
+            hideMessage={hideMessages}
             votes={prize.metadata.votes.streamer.length}
             showVotes={prize.metadata.isVoteInProgress}
           />
@@ -37,6 +40,7 @@ const FillInTheBlank = ({ prize, channel }) => {
             avatar={prize.viewer_profile_image_url}
             displayName={prize.viewer_display_name}
             message={prize.viewer_input}
+            hideMessage={hideMessages}
             votes={prize.metadata.votes.viewer.length}
             showVotes={prize.metadata.isVoteInProgress}
           />

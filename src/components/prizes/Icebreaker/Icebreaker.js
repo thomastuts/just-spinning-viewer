@@ -1,4 +1,5 @@
 import React from "react";
+import Instructions from "../../Instructions/Instructions.js";
 
 import {
   MainContentGrid,
@@ -14,6 +15,11 @@ import "./Icebreaker.scss";
 const Icebreaker = ({ prize, channel }) => {
   return (
     <Stack vertical spacing="default">
+      <Instructions instructionsFor={prize.viewer_display_name}>
+        <p>
+          Type <strong>!s</strong> followed by your answer.
+        </p>
+      </Instructions>
       <PrizeTitle>Icebreaker</PrizeTitle>
       <PrizeDescription>
         {prize.viewer_display_name} GETS TO ANSWER A QUESTION. Is their answer a

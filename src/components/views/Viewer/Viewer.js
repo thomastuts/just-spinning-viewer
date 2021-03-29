@@ -16,6 +16,7 @@ import Oneliner from "../../prizes/Oneliner/Oneliner.js";
 
 import "./Viewer.scss";
 import VotingTimer from "../../VotingTimer/VotingTimer.js";
+import Logo from "../../../images/logo.svg";
 
 const prizeComponentsByPrizeType = {
   LEGS_OR_HOTDOGS_QUIZ: LegsOrHotdogQuiz,
@@ -46,6 +47,8 @@ const Viewer = ({ channel }) => {
   const activePrize = useActivePrize({ channelId: channel.channel_id });
   const [prizeForReveal, setPrizeForReveal] = useState(null);
   const pusherChannel = useChannel(channel.channel_id);
+
+  //console.log(prizeForReveal);
 
   //useEffect(() => {
   //  setPrizeForReveal(REVEAL_MOCK_DATA);
@@ -97,6 +100,12 @@ const Viewer = ({ channel }) => {
 
   return (
     <div className="viewer">
+      <img
+        className="viewer__logo"
+        src={Logo}
+        alt=""
+        style={{ opacity: !activePrize && !prizeForReveal ? 1 : 0.1 }}
+      />
       <div className="viewer__content">{mainContent}</div>
       {activePrize &&
         activePrize.metadata &&

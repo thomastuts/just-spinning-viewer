@@ -2,6 +2,7 @@ import React from "react";
 import QuestionIcon from "../../../images/question.png";
 
 import DebugJSON from "../../DebugJSON/DebugJSON.js";
+import Instructions from "../../Instructions/Instructions.js";
 import {
   MainContentGrid,
   PrizeDescription,
@@ -15,6 +16,26 @@ const Oneliner = ({ prize, channel }) => {
 
   return (
     <Stack vertical spacing="default">
+      <Instructions
+        instructionsFor={
+          prize.metadata.isVoteInProgress
+            ? "chat"
+            : `${channel.channel_display_name} and ${prize.viewer_display_name}`
+        }
+      >
+        {!prize.metadata.isVoteInProgress && (
+          <p>
+            Type <strong>!s</strong> followed by your answer.
+          </p>
+        )}
+        {prize.metadata.isVoteInProgress && (
+          <p>
+            Type <strong>!s 1</strong> to vote for{" "}
+            {channel.channel_display_name}, and <strong>!s 2</strong> to vote
+            for {prize.viewer_display_name}.
+          </p>
+        )}
+      </Instructions>
       <PrizeTitle>PUTTING IT ON THE LINE</PrizeTitle>
       <PrizeDescription>
         {channel.channel_display_name} AND {prize.viewer_display_name} COME UP

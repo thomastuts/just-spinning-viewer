@@ -38,13 +38,16 @@
   display: flex;
   justify-content: center;
   text-align: center;
-}
-
-.quiz__image {
-  width: 100%;
   border-radius: 1rem;
   border: 10px solid #fff;
   box-shadow: 4px 4px 0 rgba(#000, 0.25);
+  max-height: 40vh;
+}
+
+.quiz__image {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
 .quiz__answer {

@@ -10,6 +10,7 @@ import IcebreakerVisual from "../../images/game-visual-icebreaker.svg";
 import PuttingItOnTheLineVisual from "../../images/game-visual-line.svg";
 import ShootingBlanksVisual from "../../images/game-visual-shooting-blanks.svg";
 import SlowBurnVisual from "../../images/game-visual-slow-burn.svg";
+import video from "../../videos/wheel-spinning.webm";
 
 import "./PrizeReveal.scss";
 import Stack from "../Stack/Stack.js";
@@ -69,12 +70,15 @@ const PrizeReveal = ({ prize }) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1, duration: 1.5, type: "spring" }}
       >
-        <motion.img
-          initial={{ rotate: 0 }}
-          animate={{ rotate: [0, 360] }}
-          transition={{ delay: 4, ease: "linear", repeat: Infinity }}
-          src={WheelBasic}
-        />
+        <video height={window.innerHeight} autoPlay muted controls={false}>
+          <source src={video} type="video/mp4" />
+        </video>
+        {/*<motion.img*/}
+        {/*  initial={{ rotate: 0 }}*/}
+        {/*  animate={{ rotate: [0, 360] }}*/}
+        {/*  transition={{ delay: 4, ease: "linear", repeat: Infinity }}*/}
+        {/*  src={WheelBasic}*/}
+        {/*/>*/}
       </motion.div>
     </React.Fragment>
   );

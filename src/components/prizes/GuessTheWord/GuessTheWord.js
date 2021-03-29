@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 import DebugJSON from "../../DebugJSON/DebugJSON.js";
 import "./GuessTheWord.scss";
+import Instructions from "../../Instructions/Instructions.js";
 import {
   MainContentGrid,
   PrizeDescription,
@@ -27,8 +28,8 @@ const GuessTheWord = ({ prize, channel }) => {
 
       intervalRef.current = setInterval(() => {
         setAmountOfRevealedLetters((amount) => amount + 1);
-      }, 2000);
-    }, 2000);
+      }, 4000);
+    }, prize.metadata.revealInterval * 1000);
 
     return () => {
       clearInterval(intervalRef.current);
@@ -58,6 +59,14 @@ const GuessTheWord = ({ prize, channel }) => {
 
   return (
     <Stack vertical spacing="default">
+      <Instructions
+        instructionsFor={`${channel.channel_display_name} and ${prize.viewer_display_name}`}
+      >
+        <p>
+          Type <strong>!s</strong> followed by your answer. You can guess
+          multiple times!
+        </p>
+      </Instructions>
       <PrizeTitle>Slow burn</PrizeTitle>
       <PrizeDescription>
         GUESS THE WORD AS IT’S GRADUALLY REVEALED. FASTEST PLAYER WINS!

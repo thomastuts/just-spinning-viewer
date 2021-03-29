@@ -2,7 +2,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 
-import styles from "./Stack.scss";
+import "./Stack.scss";
 
 const getSpacingClassForSpacingUnit = (spacingUnit) => {
   switch (spacingUnit) {
@@ -11,6 +11,8 @@ const getSpacingClassForSpacingUnit = (spacingUnit) => {
     case "small":
       return "stackSpacingSmall";
     case "default":
+      return "stackSpacingDefault";
+    default:
       return "stackSpacingDefault";
   }
 };

@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./FillInTheBlank.scss";
-import DebugJSON from "../../DebugJSON/DebugJSON.js";
 import Instructions from "../../Instructions/Instructions.js";
 
 import {

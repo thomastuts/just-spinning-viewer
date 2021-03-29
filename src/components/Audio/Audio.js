@@ -60,7 +60,7 @@ const Audio = ({
         sound.fade(1, 0, fadeDurationInSeconds * 1000);
       }
     };
-  }, [id]);
+  }, [id, fadeOnUnmount, delay, fadeDurationInSeconds, volume]);
 
   return null;
 };

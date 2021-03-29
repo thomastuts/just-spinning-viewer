@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 
 import Instructions from "../../Instructions/Instructions.js";
 import {
@@ -13,8 +12,6 @@ import UserInput from "../../UserInput/UserInput.js";
 import "./LegsOrHotdogQuiz.scss";
 
 const LegsOrHotdogQuiz = ({ prize, channel }) => {
-  const [isShowingTutorial, setIsShowingTutorial] = useState(true);
-
   const haveBothPlayersVoted = prize.streamer_input && prize.viewer_input;
 
   return (

@@ -1,7 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
-
-import WheelBasic from "../../images/wheel-basic.svg";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import sleep from "../../util/sleep.js";
 import Audio from "../Audio/Audio.js";
@@ -85,7 +83,7 @@ const PrizeReveal = ({ prize }) => {
 
   const prizeRevealSection = (
     <Stack vertical spacing="default">
-      <img src={prizeConfig.visual} />
+      <img src={prizeConfig.visual} alt="" />
       <div className="prize-reveal__game-title">
         {prizeConfig.humanizedName}
       </div>

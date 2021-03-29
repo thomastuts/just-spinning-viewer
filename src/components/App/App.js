@@ -1,4 +1,4 @@
-import { PusherProvider, usePusher } from "@harelpls/use-pusher";
+import { PusherProvider } from "@harelpls/use-pusher";
 import React, { useEffect, useState } from "react";
 import queryString from "query-string";
 import * as ebsApi from "../../api/ebs.js";

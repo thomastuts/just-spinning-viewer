@@ -1,7 +1,5 @@
 import React from "react";
-import QuestionIcon from "../../../images/question.png";
 
-import DebugJSON from "../../DebugJSON/DebugJSON.js";
 import Instructions from "../../Instructions/Instructions.js";
 import {
   MainContentGrid,

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import classNames from "classnames";
 
-import DebugJSON from "../../DebugJSON/DebugJSON.js";
 import "./GuessTheWord.scss";
 import Instructions from "../../Instructions/Instructions.js";
 import {
